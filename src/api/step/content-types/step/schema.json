@@ -39,7 +39,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::child-balance.child-balance",
-      "inversedBy": "step"
+      "mappedBy": "step"
     }
   }
 }

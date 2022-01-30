@@ -15,9 +15,7 @@
       "type": "string"
     },
     "avatar": {
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "type": "media",
       "multiple": false,
       "required": true
@@ -27,6 +25,9 @@
       "relation": "oneToMany",
       "target": "api::article.article",
       "mappedBy": "writer"
+    },
+    "payload": {
+      "type": "json"
     }
   }
 }

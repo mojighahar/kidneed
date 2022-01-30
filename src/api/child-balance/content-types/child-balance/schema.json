@@ -34,6 +34,9 @@
       "relation": "oneToOne",
       "target": "api::step.step",
       "inversedBy": "child_balance"
+    },
+    "payload": {
+      "type": "json"
     }
   }
 }

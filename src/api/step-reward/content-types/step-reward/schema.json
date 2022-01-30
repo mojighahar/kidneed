@@ -36,6 +36,9 @@
     },
     "claimedAt": {
       "type": "datetime"
+    },
+    "payload": {
+      "type": "json"
     }
   }
 }

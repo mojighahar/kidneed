@@ -17,10 +17,7 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": [
-        "reward",
-        "content"
-      ],
+      "enum": ["reward", "content"],
       "required": true
     },
     "contents": {
@@ -28,6 +25,9 @@
       "relation": "oneToMany",
       "target": "api::content.content",
       "mappedBy": "category"
+    },
+    "payload": {
+      "type": "json"
     }
   }
 }

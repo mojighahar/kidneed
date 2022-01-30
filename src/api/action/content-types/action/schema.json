@@ -14,17 +14,11 @@
   "attributes": {
     "type": {
       "type": "enumeration",
-      "enum": [
-        "coin",
-        "energy"
-      ]
+      "enum": ["coin", "energy"]
     },
     "status": {
       "type": "enumeration",
-      "enum": [
-        "earned",
-        "used"
-      ]
+      "enum": ["earned", "used"]
     },
     "child": {
       "type": "relation",
@@ -47,6 +41,9 @@
       "relation": "manyToOne",
       "target": "api::step.step",
       "inversedBy": "actions"
+    },
+    "payload": {
+      "type": "json"
     }
   }
 }

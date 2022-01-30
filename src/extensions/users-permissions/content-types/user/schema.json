@@ -21,7 +21,7 @@
       "configurable": false
     },
     "email": {
-      "type": "email",
+      "type": "string",
       "minLength": 6,
       "required": false
     },
@@ -36,7 +36,8 @@
     },
     "mobile": {
       "type": "string",
-      "required": true
+      "required": true,
+      "regex": "^\\+989\\d{9}$"
     },
     "firstName": {
       "type": "string"

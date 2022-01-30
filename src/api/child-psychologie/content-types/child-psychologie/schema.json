@@ -28,6 +28,9 @@
       "required": true,
       "max": 5,
       "min": 0
+    },
+    "payload": {
+      "type": "json"
     }
   }
 }

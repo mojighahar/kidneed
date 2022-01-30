@@ -24,9 +24,7 @@
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "category": {
       "type": "relation",
@@ -42,6 +40,9 @@
       "type": "integer",
       "required": true,
       "min": 0
+    },
+    "payload": {
+      "type": "json"
     }
   }
 }

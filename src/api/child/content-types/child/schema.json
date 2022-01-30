@@ -17,10 +17,7 @@
     },
     "gender": {
       "type": "enumeration",
-      "enum": [
-        "boy",
-        "girl"
-      ]
+      "enum": ["boy", "girl"]
     },
     "age": {
       "type": "integer",
@@ -63,6 +60,9 @@
       "relation": "oneToMany",
       "target": "api::child-balance.child-balance",
       "mappedBy": "child"
+    },
+    "payload": {
+      "type": "json"
     }
   }
 }
