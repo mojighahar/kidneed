@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "step_rewards",
+  "info": {
+    "singularName": "step-reward",
+    "pluralName": "step-rewards",
+    "displayName": "step-reward",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "level": {
+      "type": "integer",
+      "min": 1,
+      "max": 7
+    },
+    "child": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::child.child",
+      "inversedBy": "step_rewards"
+    },
+    "step": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::step.step",
+      "inversedBy": "step_rewards"
+    },
+    "rewards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reward.reward"
+    },
+    "claimedAt": {
+      "type": "datetime"
+    }
+  }
+}

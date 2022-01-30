@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "child_balances",
+  "info": {
+    "singularName": "child-balance",
+    "pluralName": "child-balances",
+    "displayName": "child-balance",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "child": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::child.child",
+      "inversedBy": "child_balances"
+    },
+    "coins": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "energy": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "min": 0
+    },
+    "step": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::step.step",
+      "inversedBy": "child_balance"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activities",
+  "info": {
+    "singularName": "activity",
+    "pluralName": "activities",
+    "displayName": "activity",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "child": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::child.child",
+      "inversedBy": "activities"
+    },
+    "content": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::content.content"
+    },
+    "coins": {
+      "type": "integer",
+      "min": 10,
+      "required": true
+    },
+    "duration": {
+      "type": "integer",
+      "required": true
+    },
+    "date": {
+      "type": "date"
+    },
+    "progress": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "min": 0
+    },
+    "done": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

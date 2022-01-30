@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "child_psychologies",
+  "info": {
+    "singularName": "child-psychologie",
+    "pluralName": "child-psychologies",
+    "displayName": "child-psychologie"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "child": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::child.child",
+      "mappedBy": "child_psychologie"
+    },
+    "psychologie_question": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::psychologie-question.psychologie-question",
+      "inversedBy": "child_psychologie"
+    },
+    "point": {
+      "type": "integer",
+      "required": true,
+      "max": 5,
+      "min": 0
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "steps",
+  "info": {
+    "singularName": "step",
+    "pluralName": "steps",
+    "displayName": "step"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "month": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "max": 12
+    },
+    "year": {
+      "type": "integer",
+      "required": true,
+      "min": 1400,
+      "max": 1405
+    },
+    "step_rewards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::step-reward.step-reward",
+      "mappedBy": "step"
+    },
+    "actions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::action.action",
+      "mappedBy": "step"
+    },
+    "child_balance": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::child-balance.child-balance",
+      "inversedBy": "step"
+    }
+  }
+}

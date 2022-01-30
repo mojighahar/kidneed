@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "children",
+  "info": {
+    "singularName": "child",
+    "pluralName": "children",
+    "displayName": "child",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "boy",
+        "girl"
+      ]
+    },
+    "age": {
+      "type": "integer",
+      "min": 3
+    },
+    "characters": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::character.character"
+    },
+    "child_psychologie": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::child-psychologie.child-psychologie",
+      "inversedBy": "child"
+    },
+    "budget": {
+      "type": "integer"
+    },
+    "activities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::activity.activity",
+      "mappedBy": "child"
+    },
+    "step_rewards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::step-reward.step-reward",
+      "mappedBy": "child"
+    },
+    "actions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::action.action",
+      "mappedBy": "child"
+    },
+    "child_balances": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::child-balance.child-balance",
+      "mappedBy": "child"
+    }
+  }
+}
