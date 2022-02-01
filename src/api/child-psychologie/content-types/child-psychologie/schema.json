@@ -4,20 +4,15 @@
   "info": {
     "singularName": "child-psychologie",
     "pluralName": "child-psychologies",
-    "displayName": "child-psychologie"
+    "displayName": "childPsychologie",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "child": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::child.child",
-      "mappedBy": "child_psychologie"
-    },
-    "psychologie_question": {
+    "question": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::psychologie-question.psychologie-question",
@@ -31,6 +26,12 @@
     },
     "payload": {
       "type": "json"
+    },
+    "child": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::child.child",
+      "inversedBy": "psychologies"
     }
   }
 }

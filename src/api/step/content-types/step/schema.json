@@ -4,7 +4,8 @@
   "info": {
     "singularName": "step",
     "pluralName": "steps",
-    "displayName": "step"
+    "displayName": "step",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,7 +24,7 @@
       "min": 1400,
       "max": 1405
     },
-    "step_rewards": {
+    "stepRewards": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::step-reward.step-reward",
@@ -35,11 +36,11 @@
       "target": "api::action.action",
       "mappedBy": "step"
     },
-    "child_balance": {
+    "childBalance": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::child-balance.child-balance",
-      "mappedBy": "step"
+      "inversedBy": "step"
     }
   }
 }

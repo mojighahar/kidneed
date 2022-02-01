@@ -4,7 +4,8 @@
   "info": {
     "singularName": "psychologie-question",
     "pluralName": "psychologie-questions",
-    "displayName": "psychologie-question"
+    "displayName": "psychologieQuestion",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,16 +17,18 @@
     },
     "tag": {
       "type": "enumeration",
-      "enum": ["test"]
+      "enum": [
+        "test"
+      ]
+    },
+    "payload": {
+      "type": "json"
     },
     "child_psychologie": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::child-psychologie.child-psychologie",
-      "inversedBy": "psychologie_question"
-    },
-    "payload": {
-      "type": "json"
+      "inversedBy": "question"
     }
   }
 }

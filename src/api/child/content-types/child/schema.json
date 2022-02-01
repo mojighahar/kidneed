@@ -17,7 +17,10 @@
     },
     "gender": {
       "type": "enumeration",
-      "enum": ["boy", "girl"]
+      "enum": [
+        "boy",
+        "girl"
+      ]
     },
     "age": {
       "type": "integer",
@@ -28,11 +31,11 @@
       "relation": "oneToMany",
       "target": "api::character.character"
     },
-    "child_psychologie": {
+    "psychologies": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::child-psychologie.child-psychologie",
-      "inversedBy": "child"
+      "mappedBy": "child"
     },
     "budget": {
       "type": "integer"

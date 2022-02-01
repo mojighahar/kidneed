@@ -4,7 +4,7 @@
   "info": {
     "singularName": "step-reward",
     "pluralName": "step-rewards",
-    "displayName": "step-reward",
+    "displayName": "stepReward",
     "description": ""
   },
   "options": {
@@ -23,12 +23,6 @@
       "target": "api::child.child",
       "inversedBy": "step_rewards"
     },
-    "step": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::step.step",
-      "inversedBy": "step_rewards"
-    },
     "rewards": {
       "type": "relation",
       "relation": "oneToMany",
@@ -39,6 +33,12 @@
     },
     "payload": {
       "type": "json"
+    },
+    "step": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::step.step",
+      "inversedBy": "stepRewards"
     }
   }
 }
