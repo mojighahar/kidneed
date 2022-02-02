@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "child_challenges",
+  "info": {
+    "singularName": "child-challenge",
+    "pluralName": "child-challenges",
+    "displayName": "childChallenge"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "challenge": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::challenge.challenge",
+      "inversedBy": "child_challenges"
+    },
+    "child": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::child.child",
+      "inversedBy": "child_challenges"
+    },
+    "attachments": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "rank": {
+      "type": "integer"
+    }
+  }
+}

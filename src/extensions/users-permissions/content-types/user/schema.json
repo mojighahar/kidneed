@@ -26,13 +26,16 @@
       "required": false
     },
     "otp": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "otpSentAt": {
-      "type": "datetime"
+      "type": "datetime",
+      "private": true
     },
     "otpExpiredAt": {
-      "type": "datetime"
+      "type": "datetime",
+      "private": true
     },
     "mobile": {
       "type": "string",
@@ -44,6 +47,12 @@
     },
     "lastName": {
       "type": "string"
+    },
+    "children": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::child.child",
+      "mappedBy": "user"
     }
   }
 }

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "challenges",
+  "info": {
+    "singularName": "challenge",
+    "pluralName": "challenges",
+    "displayName": "challenge"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "ended": {
+      "type": "boolean"
+    },
+    "child_challenges": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::child-challenge.child-challenge",
+      "mappedBy": "challenge"
+    }
+  }
+}

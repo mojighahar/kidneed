@@ -66,6 +66,18 @@
     },
     "payload": {
       "type": "json"
+    },
+    "child_challenges": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::child-challenge.child-challenge",
+      "mappedBy": "child"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "children"
     }
   }
 }

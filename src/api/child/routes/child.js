@@ -1,9 +1,15 @@
-'use strict';
+"use strict";
 
 /**
  * child router.
  */
 
-const { createCoreRouter } = require('@strapi/strapi').factories;
+const { createCoreRouter } = require("@strapi/strapi").factories;
 
-module.exports = createCoreRouter('api::child.child');
+module.exports = createCoreRouter("api::child.child", {
+  config: {
+    find: {
+      policies: ["children-owner"],
+    },
+  },
+});
