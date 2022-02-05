@@ -8,6 +8,14 @@
 you can use the following video for more information about contributing to open source project:
 [How to Fork and Clone a GitHub Repository](https://app.egghead.io/lessons/javascript-how-to-fork-and-clone-a-github-repository?pl=how-to-contribute-to-an-open-source-project-on-github)
 
+for creating pull request watch this:
+[How to create a Pull Request on GitHub](https://app.egghead.io/lessons/javascript-how-to-create-a-pull-request-on-github?pl=how-to-contribute-to-an-open-source-project-on-github)
+
+## COMMITS
+
+In order to commit your changes please follow the conventional commits rules if it is possible for you (there is no restriction on it, but we will be happier if you follow the below guide):
+[Conventional Commits Guideline](https://www.conventionalcommits.org/en/v1.0.0/)
+
 ## Restrictions
 
 the following text will clarify the changes you are allowed in order to contribute to the project based on your defined tasks
@@ -17,6 +25,8 @@ the following text will clarify the changes you are allowed in order to contribu
   It means you are not allowed to change any file outside of the `src` directory
 
   but there is an exception in the `plugins.js` file. if you want to develop a plugin. strapi will auto import necessary lines in this file (then it's acceptable for us to accept your pull request). you are allowed to change the imported lines.
+
+- you are not allowed to adding new content-type to the project. if you need more fields to keep something more please consider using `payload` field.
 
 - for adding new functionality to the api just do it in your namespace.
 
