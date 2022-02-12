@@ -78,6 +78,12 @@
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "children"
+    },
+    "rewards": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::reward.reward",
+      "inversedBy": "children"
     }
   }
 }

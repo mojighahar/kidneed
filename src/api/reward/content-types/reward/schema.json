@@ -46,6 +46,12 @@
     },
     "payload": {
       "type": "json"
+    },
+    "children": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::child.child",
+      "inversedBy": "rewards"
     }
   }
 }
