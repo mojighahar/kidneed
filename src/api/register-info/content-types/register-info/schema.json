@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "register_infos",
+  "info": {
+    "singularName": "register-info",
+    "pluralName": "register-infos",
+    "displayName": "RegisterInfo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "video": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "body": {
+      "type": "text"
+    }
+  }
+}
