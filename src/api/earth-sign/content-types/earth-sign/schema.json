@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "earth_signs",
+  "info": {
+    "singularName": "earth-sign",
+    "pluralName": "earth-signs",
+    "displayName": "earth-sign"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

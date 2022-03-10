@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "earth_roots",
+  "info": {
+    "singularName": "earth-root",
+    "pluralName": "earth-roots",
+    "displayName": "earth-root"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
