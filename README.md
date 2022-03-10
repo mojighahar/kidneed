@@ -25,7 +25,7 @@ cp .env.example .env
 4. run project in development:
 
 ```
-yarn development
+yarn develop
 ```
 
 ### STRUCTURE
