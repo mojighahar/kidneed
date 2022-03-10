@@ -32,7 +32,7 @@ module.exports = createCoreController('api::saturn-message.saturn-message' , ({s
       child : childId  , 
     }
     if (text) 
-      where.text = text;
+      where.text = { $containsi : text};
     if(type)
       where.type = type;
 
