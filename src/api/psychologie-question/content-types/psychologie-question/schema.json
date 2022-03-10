@@ -18,12 +18,6 @@
     "payload": {
       "type": "json"
     },
-    "child_psychologie": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::child-psychologie.child-psychologie",
-      "inversedBy": "question"
-    },
     "category": {
       "type": "enumeration",
       "enum": [
@@ -37,8 +31,17 @@
     "slug": {
       "type": "string",
       "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
-      "unique": false,
-      "required": false
+      "unique": true,
+      "required": true
+    },
+    "step_psychology": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::step-psychologie.step-psychologie",
+      "inversedBy": "psychologie_question"
+    },
+    "greater_than_six": {
+      "type": "boolean"
     }
   }
 }

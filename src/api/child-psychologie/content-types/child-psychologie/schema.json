@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "question": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::psychologie-question.psychologie-question",
-      "mappedBy": "child_psychologie"
-    },
     "point": {
       "type": "integer",
       "required": true,
