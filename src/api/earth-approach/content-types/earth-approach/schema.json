@@ -39,6 +39,14 @@
       "relation": "manyToMany",
       "target": "api::earth-sign.earth-sign",
       "mappedBy": "earth_approaches"
+    },
+    "result_description": {
+      "type": "richtext",
+      "required": true
+    },
+    "result_video_link": {
+      "type": "text",
+      "required": true
     }
   }
 }

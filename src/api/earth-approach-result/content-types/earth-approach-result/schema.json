@@ -4,7 +4,8 @@
   "info": {
     "singularName": "earth-approach-result",
     "pluralName": "earth-approach-results",
-    "displayName": "earth-approach-result"
+    "displayName": "earth-approach-result",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,6 +18,10 @@
     },
     "description": {
       "type": "richtext",
+      "required": true
+    },
+    "media_link": {
+      "type": "text",
       "required": true
     }
   }
