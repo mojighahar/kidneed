@@ -7,7 +7,19 @@ const jmoment = require("moment-jalaali");
 
 module.exports = {
   async dashboardStats(ctx) {
-    let { start = null, end = null } = ctx.request.body;
+    const user = ctx.state.user;
+    let { start = null, end = null, childrenId } = ctx.request.body;
+
+    const condition = {
+      user: user.id
+    }
+    if (childrenId) condition.id = childrenId;
+
+    const children = await strapi.query('api::child.child').findOne({
+      where: condition
+    });
+
+    if (!children) return null;
 
     if(start)
       start = jmoment(start);
@@ -29,7 +41,8 @@ module.exports = {
         },
         type: {
           $in: ["book", "game", "video"]
-        }
+        },
+        child: children.id
       }
     });
 
