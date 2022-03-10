@@ -1,9 +1,13 @@
-'use strict';
-
-/**
- * earth-approach router.
- */
-
-const { createCoreRouter } = require('@strapi/strapi').factories;
-
-module.exports = createCoreRouter('api::earth-approach.earth-approach');
+"use strict";
+module.exports = {
+  routes: [
+    {
+      method: "GET",
+      path: "/earth/approach",
+      handler: "earth-approach.getApproach",
+      config: {
+        auth: false
+      },
+    },
+  ],
+};
