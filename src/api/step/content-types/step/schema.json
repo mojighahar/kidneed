@@ -29,6 +29,27 @@
       "relation": "oneToMany",
       "target": "api::action.action",
       "mappedBy": "step"
+    },
+    "child": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::child.child",
+      "inversedBy": "steps"
+    },
+    "growthArea": {
+      "type": "enumeration",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "step_psychologie": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::step-psychologie.step-psychologie",
+      "inversedBy": "steps"
     }
   }
 }
