@@ -1,9 +1,14 @@
 'use strict';
-
-/**
- * earth-steps-result router.
- */
-
-const { createCoreRouter } = require('@strapi/strapi').factories;
-
-module.exports = createCoreRouter('api::earth-steps-result.earth-steps-result');
+"use strict";
+module.exports = {
+  routes: [
+    {
+      method: "GET",
+      path: "/earth/result",
+      handler: "earth-steps-result.getResult",
+      config: {
+        auth: false
+      },
+    },
+  ],
+};
