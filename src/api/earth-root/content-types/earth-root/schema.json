@@ -4,7 +4,8 @@
   "info": {
     "singularName": "earth-root",
     "pluralName": "earth-roots",
-    "displayName": "earth-root"
+    "displayName": "earth-root",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,6 +15,12 @@
     "title": {
       "type": "string",
       "required": true
+    },
+    "earth_signs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::earth-sign.earth-sign",
+      "inversedBy": "earth_roots"
     }
   }
 }

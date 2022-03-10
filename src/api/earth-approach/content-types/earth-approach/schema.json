@@ -33,6 +33,12 @@
     },
     "duration": {
       "type": "decimal"
+    },
+    "earth_signs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::earth-sign.earth-sign",
+      "mappedBy": "earth_approaches"
     }
   }
 }

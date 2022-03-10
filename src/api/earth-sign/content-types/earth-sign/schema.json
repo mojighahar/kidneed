@@ -4,7 +4,8 @@
   "info": {
     "singularName": "earth-sign",
     "pluralName": "earth-signs",
-    "displayName": "earth-sign"
+    "displayName": "earth-sign",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,6 +15,18 @@
     "title": {
       "type": "string",
       "required": true
+    },
+    "earth_roots": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::earth-root.earth-root",
+      "mappedBy": "earth_signs"
+    },
+    "earth_approaches": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::earth-approach.earth-approach",
+      "inversedBy": "earth_signs"
     }
   }
 }
