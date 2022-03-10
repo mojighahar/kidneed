@@ -8,7 +8,6 @@ module.exports = {
     const signs = await strapi.db.query("api::earth-sign.earth-sign").findMany({
       where: whereQuery,
       orderBy: { publishedAt: "DESC" },
-      populate: ["earth_approaches"],
     });
     return signs;
   },
