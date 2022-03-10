@@ -24,23 +24,11 @@
       "min": 1400,
       "max": 1405
     },
-    "stepRewards": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::step-reward.step-reward",
-      "mappedBy": "step"
-    },
     "actions": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::action.action",
       "mappedBy": "step"
-    },
-    "childBalance": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::child-balance.child-balance",
-      "inversedBy": "step"
     }
   }
 }

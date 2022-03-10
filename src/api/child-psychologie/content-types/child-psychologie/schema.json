@@ -16,7 +16,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::psychologie-question.psychologie-question",
-      "inversedBy": "child_psychologie"
+      "mappedBy": "child_psychologie"
     },
     "point": {
       "type": "integer",

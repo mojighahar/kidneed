@@ -37,19 +37,10 @@
       "target": "api::child-psychologie.child-psychologie",
       "mappedBy": "child"
     },
-    "budget": {
-      "type": "integer"
-    },
-    "activities": {
+    "schedules": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::activity.activity",
-      "mappedBy": "child"
-    },
-    "step_rewards": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::step-reward.step-reward",
       "mappedBy": "child"
     },
     "actions": {
@@ -58,31 +49,13 @@
       "target": "api::action.action",
       "mappedBy": "child"
     },
-    "child_balances": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::child-balance.child-balance",
-      "mappedBy": "child"
-    },
     "payload": {
       "type": "json"
-    },
-    "child_challenges": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::child-challenge.child-challenge",
-      "mappedBy": "child"
     },
     "user": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "children"
-    },
-    "rewards": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::reward.reward",
       "inversedBy": "children"
     }
   }

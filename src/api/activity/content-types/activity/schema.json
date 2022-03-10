@@ -4,7 +4,7 @@
   "info": {
     "singularName": "activity",
     "pluralName": "activities",
-    "displayName": "activity",
+    "displayName": "Schedule",
     "description": ""
   },
   "options": {
@@ -12,22 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "child": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::child.child",
-      "inversedBy": "activities"
-    },
-    "content": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::content.content"
-    },
-    "coins": {
-      "type": "integer",
-      "min": 10,
-      "required": true
-    },
     "duration": {
       "type": "integer",
       "required": true
@@ -48,6 +32,24 @@
     },
     "payload": {
       "type": "json"
+    },
+    "child": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::child.child",
+      "inversedBy": "schedules"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "animation",
+        "activity",
+        "audio",
+        "book",
+        "game",
+        "website",
+        "video"
+      ]
     }
   }
 }

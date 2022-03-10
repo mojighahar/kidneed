@@ -32,11 +32,6 @@
       "target": "api::child.child",
       "inversedBy": "actions"
     },
-    "reward": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::reward.reward"
-    },
     "activity": {
       "type": "relation",
       "relation": "oneToOne",

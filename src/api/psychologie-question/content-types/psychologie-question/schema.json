@@ -15,12 +15,6 @@
     "title": {
       "type": "string"
     },
-    "tag": {
-      "type": "enumeration",
-      "enum": [
-        "test"
-      ]
-    },
     "payload": {
       "type": "json"
     },
@@ -29,6 +23,22 @@
       "relation": "oneToOne",
       "target": "api::child-psychologie.child-psychologie",
       "inversedBy": "question"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "unique": true,
+      "required": true
     }
   }
 }
