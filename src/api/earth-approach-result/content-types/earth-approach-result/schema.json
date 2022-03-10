@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "earth_approach_results",
+  "info": {
+    "singularName": "earth-approach-result",
+    "pluralName": "earth-approach-results",
+    "displayName": "earth-approach-result"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
