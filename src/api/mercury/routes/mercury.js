@@ -10,5 +10,15 @@ module.exports = {
         middlewares: [],
       },
     },
+    {
+      method: "GET",
+      path: "/children/:id/dashboard",
+      handler: "mercury.childrenDashboard",
+      config: {
+        prefix: "mercury",
+        policies: [],
+        middlewares: [],
+      },
+    },
   ],
 };
