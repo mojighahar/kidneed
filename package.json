@@ -16,6 +16,7 @@
     "axios": "^0.25.0",
     "date-fns": "^2.28.0",
     "lodash": "^4.17.21",
+    "moment-jalaali": "^0.9.4",
     "node-fetch": "^3.2.0",
     "pg": "^8.7.3",
     "ramda": "^0.28.0",
