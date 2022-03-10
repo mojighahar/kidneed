@@ -21,7 +21,8 @@ const validateChildren = async (userId, childrenId) => {
 module.exports = {
   async dashboardStats(ctx) {
     const user = ctx.state.user;
-    let { start = null, end = null, childrenId } = ctx.request.body;
+    let { start = null, end = null } = ctx.request.body;
+    const { childrenId } = ctx.params;
 
     const condition = {
       user: user.id
@@ -73,11 +74,19 @@ module.exports = {
     const children = await validateChildren(user.id, childrenId);
 
     const today = new Date().toISOString();
-    return await strapi.query('api::activity.activity').findMany({
+    const activities = await strapi.query('api::activity.activity').findMany({
       where: {
         date: today,
         child: children.id
       }
     });
+
+    return {
+      'book': activities.filter(a => a.type === 'book'),
+      'game': activities.filter(a => a.type === 'game'),
+      'video': activities.filter(a => a.type === 'video'),
+      'audio': activities.filter(a => a.type === 'audio'),
+      'activity': activities.filter(a => a.type === 'activity'),
+    }
   }
 };
