@@ -1,9 +1,13 @@
-'use strict';
-
-/**
- * earth-sign router.
- */
-
-const { createCoreRouter } = require('@strapi/strapi').factories;
-
-module.exports = createCoreRouter('api::earth-sign.earth-sign');
+"use strict";
+module.exports = {
+  routes: [
+    {
+      method: "GET",
+      path: "/earth/sign",
+      handler: "earth-sign.getSign",
+      config: {
+        auth: false
+      },
+    },
+  ],
+};
