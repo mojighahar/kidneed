@@ -53,6 +53,12 @@
       "relation": "oneToMany",
       "target": "api::child.child",
       "mappedBy": "user"
+    },
+    "messages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::saturn-message.saturn-message",
+      "mappedBy": "user"
     }
   }
 }

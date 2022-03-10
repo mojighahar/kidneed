@@ -57,6 +57,12 @@
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "children"
+    },
+    "messages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::saturn-message.saturn-message",
+      "mappedBy": "child"
     }
   }
 }
