@@ -50,6 +50,9 @@
         "website",
         "video"
       ]
+    },
+    "contentId": {
+      "type": "integer"
     }
   }
 }

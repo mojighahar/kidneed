@@ -5,6 +5,19 @@ const jmoment = require("moment-jalaali");
  * A set of functions called "actions" for `mercury`
  */
 
+const validateChildren = async (userId, childrenId) => {
+  const children = await strapi.query('api::child.child').findOne({
+    where: {
+      id: childrenId,
+      user: userId
+    }
+  });
+
+  if (children) return children;
+
+  throw Error();
+}
+
 module.exports = {
   async dashboardStats(ctx) {
     const user = ctx.state.user;
@@ -25,13 +38,13 @@ module.exports = {
       start = jmoment(start);
     else
       start = jmoment().startOf("jMonth");
-    start = start.startOf("day").toDate();
+    start = start.toISOString();
 
     if(end)
       end = jmoment(end);
     else
       end = jmoment().endOf("jMonth");
-    end = end.endOf("day").toDate();
+    end = end.toISOString();
 
     const activities = await strapi.query("api::activity.activity").findMany({
       where: {
@@ -51,5 +64,20 @@ module.exports = {
       "game": activities.filter(a => a.type === "game").reduce((partialSum, a) => partialSum + a, 0),
       "video": activities.filter(a => a.type === "video").reduce((partialSum, a) => partialSum + a, 0)
     };
+  },
+
+  async childrenDashboard(ctx) {
+    const user = ctx.state.user;
+    const { id: childrenId } = ctx.params;
+
+    const children = await validateChildren(user.id, childrenId);
+
+    const today = new Date().toISOString();
+    return await strapi.query('api::activity.activity').findMany({
+      where: {
+        date: today,
+        child: children.id
+      }
+    });
   }
 };
